@@ -1,0 +1,23 @@
+extends base.pug
+
+block scripts  
+  script(src='/static/index.js')
+
+block style 
+  style
+    include ../static/style.css
+
+block content
+ main
+  .left
+    h1 Digital
+    h2 Marketing
+    p
+      | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia molestias laudantium cupiditate deserunt
+      | consequuntur at voluptatibus quae eveniet nulla porro. Lorem ipsum dolor sit amet, consectetur
+      | adipisicing elit. Cupiditate, nemo!
+    button.cta Learn More
+  .right
+    img(src='static/2.png' alt='banner')
+
+

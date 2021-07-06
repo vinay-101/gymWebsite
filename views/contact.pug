@@ -1,0 +1,35 @@
+extends base.pug
+
+block scripts  
+  script(src='/static/index.js')
+
+block style 
+  style
+    include ../static/style.css
+block content
+   form#container(action='/contact' method='POST')
+     .row
+        .col-25
+          label(for='firstname') First Name
+        .col-75
+          input#fname(type='text' name='firstname' placeholder='Your name..')
+     .row
+       .col-25
+         label(for='lastname') Last Name
+       .col-75
+         input#lname(type='text' name='lastname' placeholder='Your last name..')
+     .row
+       .col-25
+         label(for='country') Country
+       .col-75
+         select#country(name='country')
+           option(value='australia') Australia
+           option(value='canada') Canada
+           option(value='usa') USA
+     .row
+       .col-25
+         label(for='subject') Subject
+       .col-75
+         textarea(rows='10' cols='15' name='subject' placeholder='Enter about yourself')
+     .row
+       input(type='submit' value='Submit')
